@@ -59,7 +59,12 @@
 #define USE_I2C
 #define USE_I2C_DEVICE_2
 #define I2C_DEVICE_2_SHARES_UART3
-#define I2C_EXT_BUS BUS_I2C2
+
+#define USE_I2C_DEVICE_3
+#define I2C3_SCL                PA8
+#define I2C3_SDA                PC9
+
+#define I2C_EXT_BUS BUS_I2C3
 #endif
 
 #define UG2864_I2C_BUS I2C_EXT_BUS
@@ -122,7 +127,7 @@
 #define VBUS_SENSING_ENABLED
 
 #if defined(OMNIBUSF4PRO) || defined(OMNIBUSF4V3)
-#define USE_UART_INVERTER
+//#define USE_UART_INVERTER
 #endif
 
 #define USE_UART1
@@ -137,6 +142,10 @@
 #define UART3_RX_PIN            PB11
 #define UART3_TX_PIN            PB10
 
+#define USE_UART4
+#define UART4_RX_PIN            PA1
+#define UART4_TX_PIN            PA0
+
 #define USE_UART6
 #define UART6_RX_PIN            PC7
 #define UART6_TX_PIN            PC6
@@ -150,7 +159,7 @@
 #define SOFTSERIAL_1_RX_PIN     PC6     // shared with UART6 TX
 #define SOFTSERIAL_1_TX_PIN     PC6     // shared with UART6 TX
 
-#define SERIAL_PORT_COUNT       5       // VCP, USART1, USART3, USART6, SOFTSERIAL1
+#define SERIAL_PORT_COUNT       6       // VCP, USART1, USART3, USART4, USART6, SOFTSERIAL1
 
 #elif defined(OMNIBUSF4V3_S6_SS)        // one softserial on S6
 #define USE_SOFTSERIAL1
