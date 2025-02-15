@@ -53,6 +53,8 @@ endif()
 
 project(INAV VERSION 8.0.0)
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 enable_language(ASM)
 
 if(MACOSX AND SITL)
