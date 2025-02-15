@@ -28,6 +28,8 @@ cov-int*
 /release/
 /*_SITL/
 
+compile_commands.json
+
 # script-generated files
 docs/Manual.pdf
 README.pdf
